@@ -3,10 +3,9 @@ FROM node:22-alpine AS base
 WORKDIR /app
 RUN apk add --no-cache libc6-compat
 
-# Stage 2: Dependency installation
 FROM base AS deps
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci || npm install --no-audit --no-fund
 
 # Stage 3: Building the application
 FROM base AS builder
