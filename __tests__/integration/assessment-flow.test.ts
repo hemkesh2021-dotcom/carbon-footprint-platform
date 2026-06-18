@@ -65,6 +65,20 @@ describe('Assessment Integration Flow', () => {
     expect(latest).not.toBeNull();
     expect(latest!.id).toBe(history[0]!.id);
 
+    // 3.1. Update the existing assessment
+    const updatedAssessment = {
+      ...sampleAssessment,
+      id: latest!.id,
+      transport: {
+        ...sampleAssessment.transport,
+        vehicleType: 'electric' as const,
+      },
+    };
+    await assessmentService.saveAssessment(updatedAssessment);
+    history = await assessmentService.getAssessmentHistory();
+    expect(history.length).toBe(1);
+    expect(history[0]!.transport.vehicleType).toBe('electric');
+
     // 4. Delete the assessment
     await assessmentService.deleteAssessment(latest!.id);
 

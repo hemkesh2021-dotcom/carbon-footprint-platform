@@ -59,5 +59,23 @@ describe('Validation and Sanitization Utilities', () => {
       const uuid = generateId();
       expect(uuid).toMatch(/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i);
     });
+
+    test('should generate UUID using fallback if crypto is not available', () => {
+      const originalCrypto = global.crypto;
+      Object.defineProperty(global, 'crypto', {
+        value: undefined,
+        writable: true,
+        configurable: true,
+      });
+
+      const uuid = generateId();
+      expect(uuid).toMatch(/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i);
+
+      Object.defineProperty(global, 'crypto', {
+        value: originalCrypto,
+        writable: true,
+        configurable: true,
+      });
+    });
   });
 });

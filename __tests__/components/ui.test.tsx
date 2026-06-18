@@ -25,6 +25,17 @@ describe('UI Primitives Components', () => {
       fireEvent.click(button);
       expect(handleClick).not.toHaveBeenCalled();
     });
+
+    test('renders loading state, shows spinner and prevents clicks', () => {
+      const handleClick = jest.fn();
+      render(<Button onClick={handleClick} loading>Click Me</Button>);
+      const button = screen.getByRole('button', { name: 'Click Me' });
+      expect(button).toBeDisabled();
+      expect(button).toHaveAttribute('aria-busy', 'true');
+      expect(button.querySelector('svg')).toBeInTheDocument();
+      fireEvent.click(button);
+      expect(handleClick).not.toHaveBeenCalled();
+    });
   });
 
   describe('ProgressBar', () => {
@@ -38,6 +49,13 @@ describe('UI Primitives Components', () => {
       expect(progressbar).toHaveAttribute('aria-valuemax', '100');
       expect(progressbar).toHaveAttribute('aria-label', 'Test Progress');
       expect(screen.getByText('40%')).toBeInTheDocument();
+    });
+
+    test('renders correctly with animated=false', () => {
+      render(<ProgressBar value={40} max={100} showLabel label="Test Progress" animated={false} />);
+      const progressbar = screen.getByRole('progressbar');
+      expect(progressbar).toBeInTheDocument();
+      expect(progressbar).toHaveAttribute('aria-valuenow', '40');
     });
   });
 });

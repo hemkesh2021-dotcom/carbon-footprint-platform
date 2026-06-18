@@ -165,5 +165,20 @@ describe('storage service', () => {
       expect(() => storage.clear()).not.toThrow();
       expect(consoleSpy).toHaveBeenCalled();
     });
+
+    it('returns null or does nothing when window is undefined (SSR mode)', () => {
+      const originalWindow = global.window;
+      // Temporarily remove global.window to simulate SSR
+      // @ts-ignore
+      delete global.window;
+
+      expect(storage.get('theme')).toBeNull();
+      expect(() => storage.set('theme', 'dark')).not.toThrow();
+      expect(() => storage.remove('theme')).not.toThrow();
+      expect(() => storage.clear()).not.toThrow();
+
+      // Restore global.window
+      global.window = originalWindow;
+    });
   });
 });
