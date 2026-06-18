@@ -1,5 +1,7 @@
 'use client';
 
+/** @module HabitsPage - Habit tracker page with custom habits creation and streak calendar rendering */
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, Loader2, Leaf } from 'lucide-react';
@@ -8,6 +10,10 @@ import { StreakCalendar } from '@/components/habits/StreakCalendar';
 import { AddHabitModal } from '@/components/habits/AddHabitModal';
 import { useHabits } from '@/hooks/useHabits';
 
+/**
+ * HabitsPage component managing habit trackers.
+ * Includes habit templates selection modal, streak summary charts, and daily checklists.
+ */
 export default function HabitsPage() {
   const { habits, templates, addHabit, removeHabit, markComplete, isLoading } =
     useHabits();

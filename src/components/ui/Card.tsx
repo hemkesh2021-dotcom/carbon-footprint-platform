@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Card - Card component for structuring content panels */
+
 import { forwardRef, type ReactNode } from 'react';
 import { motion, type HTMLMotionProps } from 'framer-motion';
 
@@ -31,6 +33,10 @@ const paddingClasses: Record<CardPadding, string> = {
   lg: 'p-8',
 };
 
+/**
+ * Card component for bounding content sections with customized variants and spacing.
+ * Supports a hover state with float animation for interactive elements.
+ */
 const Card = forwardRef<HTMLDivElement, CardProps>(function Card(
   {
     variant = 'default',

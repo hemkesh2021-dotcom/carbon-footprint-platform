@@ -1,7 +1,13 @@
+/** @module CalculatorPage - The carbon footprint calculator page featuring the wizard steps */
+
 import { Calculator, ChevronRight, Home } from 'lucide-react';
 import Link from 'next/link';
 import CalculatorWizard from '@/components/calculator/CalculatorWizard';
 
+/**
+ * CalculatorPage component containing the Carbon Footprint Calculator.
+ * Guides users through multi-step assessment wizard.
+ */
 export default function CalculatorPage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">

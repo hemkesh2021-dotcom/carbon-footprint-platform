@@ -1,3 +1,5 @@
+/** @module Footer - Global footer layout component with navigation sections and privacy disclaimer */
+
 import Link from 'next/link';
 import { Lock } from 'lucide-react';
 
@@ -40,6 +42,9 @@ const footerSections = [
   },
 ] as const;
 
+/**
+ * Footer component displaying resource categories, navigation links, and a secure data disclaimer.
+ */
 function Footer() {
   const currentYear = new Date().getFullYear();
 

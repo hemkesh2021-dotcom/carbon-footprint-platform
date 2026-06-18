@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Tooltip - Accessible hover/focus tooltip utility utilizing Framer Motion animations */
+
 import {
   useState,
   useRef,
@@ -42,6 +44,9 @@ const motionOrigin: Record<TooltipPosition, { initial: Record<string, number> }>
   right: { initial: { x: -4 } },
 };
 
+/**
+ * Tooltip component wraps a child element and reveals explanatory text on hover or focus.
+ */
 function Tooltip({
   content,
   children,

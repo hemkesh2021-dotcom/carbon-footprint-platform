@@ -1,5 +1,7 @@
 'use client';
 
+/** @module DashboardPage - Carbon Footprint Dashboard displaying metrics, history, and suggestions */
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { useAssessment } from '@/hooks/useAssessment';
@@ -14,6 +16,11 @@ import { ImpactSummary } from '@/components/dashboard/ImpactSummary';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight, Leaf } from 'lucide-react';
 
+/**
+ * DashboardPage component containing the dashboard content.
+ * Displays score details, trend graphs, recommendations, streaks, and goals.
+ * Prompts onboarding if no assessment history is found.
+ */
 export default function DashboardPage() {
   const { latestAssessment, assessmentHistory, isLoading } = useAssessment();
   const [habitAddedTrigger, setHabitAddedTrigger] = useState(0);

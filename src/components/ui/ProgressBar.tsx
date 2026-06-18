@@ -1,5 +1,7 @@
 'use client';
 
+/** @module ProgressBar - Progress bar component with animations and customized sizes/colors */
+
 import { motion } from 'framer-motion';
 
 type ProgressColor = 'emerald' | 'blue' | 'amber' | 'red';
@@ -36,6 +38,9 @@ const sizeClasses: Record<ProgressSize, string> = {
   lg: 'h-4',
 };
 
+/**
+ * ProgressBar component displaying a linear completion percentage with animated loading transitions.
+ */
 function ProgressBar({
   value,
   max = 100,

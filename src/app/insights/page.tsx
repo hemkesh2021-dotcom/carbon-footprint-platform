@@ -1,5 +1,7 @@
 'use client';
 
+/** @module InsightsPage - The insights and statistics trends page for carbon assessments */
+
 import { motion } from 'framer-motion';
 import { Loader2, BarChart3 } from 'lucide-react';
 import { MonthlyTrendChart } from '@/components/insights/MonthlyTrendChart';
@@ -8,6 +10,9 @@ import { ComparisonCard } from '@/components/insights/ComparisonCard';
 import { SummaryReport } from '@/components/insights/SummaryReport';
 import { useAssessment } from '@/hooks/useAssessment';
 
+/**
+ * InsightsPage component rendering monthly trend charts, category trends, comparisons, and summary reports.
+ */
 export default function InsightsPage() {
   const { assessmentHistory, isLoading } = useAssessment();
 

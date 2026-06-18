@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Button - Button component with animations and states */
+
 import { forwardRef, type ReactNode } from 'react';
 import { motion, type HTMLMotionProps } from 'framer-motion';
 
@@ -59,6 +61,10 @@ function Spinner() {
   );
 }
 
+/**
+ * Button component with support for multiple variants, loading states, icons, and motion interactions.
+ * Uses Framer Motion for smooth tap and hover micro-animations.
+ */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
     variant = 'primary',

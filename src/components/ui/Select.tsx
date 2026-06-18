@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Select - Custom select dropdown UI component with styling and support for disabled states */
+
 import { useId } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -18,6 +20,9 @@ interface SelectProps {
   disabled?: boolean;
 }
 
+/**
+ * Select component for rendering an accessible custom drop-down list.
+ */
 function Select({
   options,
   value,

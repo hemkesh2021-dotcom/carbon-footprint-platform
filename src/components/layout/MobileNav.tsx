@@ -1,5 +1,7 @@
 'use client';
 
+/** @module MobileNav - Responsive mobile drawer navigation sidebar with animation and focus trapping */
+
 import { useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,6 +14,10 @@ interface MobileNavProps {
   links: ReadonlyArray<{ href: string; label: string }>;
 }
 
+/**
+ * MobileNav component rendering the slide-out drawer on small viewports.
+ * Manages modal focus states, escape key exits, and page transition listeners.
+ */
 function MobileNav({ isOpen, onClose, links }: MobileNavProps) {
   const pathname = usePathname();
   const navRef = useRef<HTMLDivElement>(null);

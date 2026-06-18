@@ -1,3 +1,5 @@
+/** @module RootLayout - The root HTML template and layout context wrapper for CarbonWise */
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -36,6 +38,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://carbonwise.app'),
 };
 
+/**
+ * RootLayout component wrapping pages with fonts, global styling, theme configurations, navigation header, and footer.
+ */
 export default function RootLayout({
   children,
 }: {

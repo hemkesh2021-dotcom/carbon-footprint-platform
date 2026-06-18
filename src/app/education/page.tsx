@@ -1,5 +1,7 @@
 'use client';
 
+/** @module EducationPage - Science-backed educational material on carbon footprints and FAQs */
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/Card';
@@ -12,6 +14,10 @@ import {
 } from '@/constants/education-content';
 import { ChevronDown, HelpCircle, BookOpen, Sparkles, Search } from 'lucide-react';
 
+/**
+ * EducationPage component containing curated articles, myth vs. fact cards, search indexes,
+ * and an accordion for FAQs and Terminology glossary list.
+ */
 export default function EducationPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFaqIndex, setExpandedFaqIndex] = useState<number | null>(null);
@@ -247,6 +253,10 @@ interface ArticleDrawerProps {
   article: typeof EDUCATION_ARTICLES[number];
 }
 
+/**
+ * ArticleDrawer component renders a button that opens a full modal drawer.
+ * Displays article category, header, and body text rendered from basic markdown formatting.
+ */
 function ArticleDrawer({ article }: ArticleDrawerProps) {
   const [isOpen, setIsOpen] = useState(false);
 

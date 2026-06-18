@@ -1,5 +1,7 @@
 'use client';
 
+/** @module ProgressRing - Circular progress ring visualizer using animated SVG paths */
+
 import { useId } from 'react';
 import { motion } from 'framer-motion';
 
@@ -39,6 +41,10 @@ const colorMap: Record<RingColor, { stroke: string; track: string; stops: [strin
   },
 };
 
+/**
+ * ProgressRing component displaying circular percentage progression.
+ * Supports customizable size, stroke thickness, color variations, and gradients.
+ */
 function ProgressRing({
   value,
   size = 120,

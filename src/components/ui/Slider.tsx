@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Slider - Slider component with track gradients, tooltip overlays, and accessible attributes */
+
 import { useId } from 'react';
 
 interface SliderProps {
@@ -14,6 +16,10 @@ interface SliderProps {
   className?: string;
 }
 
+/**
+ * Slider component for selection from a range of numerical values.
+ * Renders custom track colors and a dynamic tooltip above the thumb.
+ */
 function Slider({
   min,
   max,

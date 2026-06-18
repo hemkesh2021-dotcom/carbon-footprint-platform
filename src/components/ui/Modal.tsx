@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Modal - Overlay modal / dialog component with focus trapping and portal rendering */
+
 import {
   useEffect,
   useCallback,
@@ -28,6 +30,10 @@ const sizeClasses: Record<ModalSize, string> = {
   lg: 'max-w-2xl',
 };
 
+/**
+ * Modal component that handles overlay render, escape key exit, accessibility attributes,
+ * focus trapping, and portal rendering to document.body.
+ */
 function Modal({
   isOpen,
   onClose,

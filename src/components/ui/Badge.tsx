@@ -1,3 +1,5 @@
+/** @module Badge - Badge UI component for tags and categories */
+
 import { type ReactNode } from 'react';
 
 type BadgeVariant = 'success' | 'warning' | 'info' | 'neutral' | 'category';
@@ -28,6 +30,11 @@ const sizeClasses: Record<BadgeSize, string> = {
   md: 'px-3 py-1 text-sm gap-1.5',
 };
 
+/**
+ * Badge component for displaying small status tags, metrics, or category indicators.
+ * @param props - Properties for configuring the badge look and content.
+ * @returns React element representing the badge.
+ */
 function Badge({
   variant = 'neutral',
   size = 'sm',

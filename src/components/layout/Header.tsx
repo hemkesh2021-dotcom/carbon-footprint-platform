@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Header - Main navigation header layout component supporting themes and responsive responsive layouts */
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,6 +17,10 @@ const navLinks = [
   { href: '/education', label: 'Education' },
 ] as const;
 
+/**
+ * Header component rendered at the top of the viewport.
+ * Handles desktop links, active state detection, theme toggling, and mobile sidebar state.
+ */
 function Header() {
   const pathname = usePathname();
   const { resolvedTheme, toggleTheme } = useTheme();

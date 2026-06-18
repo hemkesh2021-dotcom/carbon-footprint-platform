@@ -1,5 +1,7 @@
 'use client';
 
+/** @module hooks/useMediaQuery - React hook for responsive design media queries. */
+
 import { useState, useEffect, useCallback } from 'react';
 
 /**

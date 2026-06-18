@@ -1,5 +1,7 @@
 'use client';
 
+/** @module ThemeProvider - Theme configuration context provider supporting light, dark, and system schemes */
+
 import {
   createContext,
   useContext,
@@ -49,6 +51,9 @@ interface ThemeProviderProps {
   defaultTheme?: Theme;
 }
 
+/**
+ * ThemeProvider component that wraps the app and controls dark mode CSS activation.
+ */
 function ThemeProvider({
   children,
   defaultTheme = 'system',
@@ -101,6 +106,10 @@ function ThemeProvider({
   );
 }
 
+/**
+ * Hook to retrieve the current theme values and modification callbacks.
+ * Requires placement inside a ThemeProvider.
+ */
 function useTheme(): ThemeContextValue {
   const ctx = useContext(ThemeContext);
   if (!ctx) {

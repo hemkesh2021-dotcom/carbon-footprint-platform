@@ -1,5 +1,7 @@
 'use client';
 
+/** @module Toggle - Accessible switch toggle UI component with spring animation */
+
 import { useId } from 'react';
 import { motion } from 'framer-motion';
 
@@ -12,6 +14,10 @@ interface ToggleProps {
   className?: string;
 }
 
+/**
+ * Toggle component that acts as an interactive switch.
+ * Employs a spring animation for the slider element.
+ */
 function Toggle({
   checked,
   onChange,
