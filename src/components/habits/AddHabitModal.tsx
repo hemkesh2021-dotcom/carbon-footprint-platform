@@ -149,27 +149,27 @@ export function AddHabitModal({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative z-10 max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-700 dark:bg-gray-800"
+            className="relative z-10 max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-800"
           >
             {/* Header */}
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200 bg-white/95 px-6 py-4 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/95">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/95 px-6 py-4 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-800/95">
               <div>
                 <h2
                   id={titleId}
-                  className="text-xl font-bold text-gray-900 dark:text-white"
+                  className="text-xl font-bold text-slate-900 dark:text-white"
                 >
                   Add New Habit
                 </h2>
                 <p
                   id={descId}
-                  className="mt-0.5 text-sm text-gray-500 dark:text-gray-400"
+                  className="mt-0.5 text-sm text-slate-500 dark:text-slate-400"
                 >
                   Choose a suggested habit or create your own
                 </p>
               </div>
               <button
                 onClick={onClose}
-                className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                className="rounded-lg p-2 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 dark:hover:bg-slate-700 dark:hover:text-slate-300"
                 aria-label="Close modal"
               >
                 <X className="h-5 w-5" />
@@ -177,7 +177,7 @@ export function AddHabitModal({
             </div>
 
             {/* Tabs */}
-            <div className="border-b border-gray-200 px-6 dark:border-gray-700">
+            <div className="border-b border-slate-200 px-6 dark:border-slate-700">
               <div className="flex gap-4" role="tablist">
                 <button
                   role="tab"
@@ -186,7 +186,7 @@ export function AddHabitModal({
                   className={`relative border-b-2 px-1 py-3 text-sm font-medium transition-colors ${
                     activeTab === 'suggested'
                       ? 'border-emerald-600 text-emerald-600 dark:border-emerald-400 dark:text-emerald-400'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                   }`}
                 >
                   <span className="flex items-center gap-1.5">
@@ -201,7 +201,7 @@ export function AddHabitModal({
                   className={`relative border-b-2 px-1 py-3 text-sm font-medium transition-colors ${
                     activeTab === 'custom'
                       ? 'border-emerald-600 text-emerald-600 dark:border-emerald-400 dark:text-emerald-400'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                   }`}
                 >
                   <span className="flex items-center gap-1.5">
@@ -232,16 +232,16 @@ export function AddHabitModal({
                           whileTap={{ scale: 0.98 }}
                           onClick={() => handleAddTemplate(template)}
                           disabled={isSubmitting}
-                          className="flex items-start gap-3 rounded-xl border border-gray-200 bg-gray-50 p-4 text-left transition-colors hover:border-emerald-300 hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700/50 dark:hover:border-emerald-600 dark:hover:bg-emerald-900/20"
+                          className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-left transition-colors hover:border-emerald-300 hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 disabled:opacity-50 dark:border-slate-600 dark:bg-slate-700/50 dark:hover:border-emerald-600 dark:hover:bg-emerald-900/20"
                         >
                           <span className="text-2xl" role="img" aria-hidden="true">
                             {template.icon}
                           </span>
                           <div className="min-w-0 flex-1">
-                            <p className="font-semibold text-gray-900 dark:text-white">
+                            <p className="font-semibold text-slate-900 dark:text-white">
                               {template.name}
                             </p>
-                            <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                            <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
                               {template.category} · {template.frequency}
                             </p>
                             <p className="mt-1 text-xs text-emerald-600 dark:text-emerald-400">
@@ -264,7 +264,7 @@ export function AddHabitModal({
                     <form onSubmit={handleAddCustom} className="space-y-5">
                       {/* Emoji picker */}
                       <fieldset>
-                        <legend className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <legend className="mb-2 text-sm font-medium text-slate-700 dark:text-slate-300">
                           Choose an icon
                         </legend>
                         <div className="flex flex-wrap gap-2">
@@ -276,7 +276,7 @@ export function AddHabitModal({
                               className={`rounded-lg p-2 text-xl transition-all ${
                                 customEmoji === emoji
                                   ? 'bg-emerald-100 ring-2 ring-emerald-500 dark:bg-emerald-900/30'
-                                  : 'bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600'
+                                  : 'bg-slate-50 hover:bg-slate-100 dark:bg-slate-700 dark:hover:bg-slate-600'
                               }`}
                               aria-label={`Select emoji ${emoji}`}
                               aria-pressed={customEmoji === emoji}
@@ -291,7 +291,7 @@ export function AddHabitModal({
                       <div>
                         <label
                           htmlFor="habit-name"
-                          className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300"
+                          className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300"
                         >
                           Habit name
                         </label>
@@ -303,7 +303,7 @@ export function AddHabitModal({
                           placeholder="e.g., Carpool to work"
                           required
                           maxLength={60}
-                          className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500"
+                          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-600 dark:bg-slate-700 dark:text-white dark:placeholder-slate-500"
                         />
                       </div>
 
@@ -311,7 +311,7 @@ export function AddHabitModal({
                       <div>
                         <label
                           htmlFor="habit-category"
-                          className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300"
+                          className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300"
                         >
                           Category
                         </label>
@@ -319,7 +319,7 @@ export function AddHabitModal({
                           id="habit-category"
                           value={customCategory}
                           onChange={(e) => setCustomCategory(e.target.value)}
-                          className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-600 dark:bg-slate-700 dark:text-white"
                         >
                           {CATEGORY_OPTIONS.map((opt) => (
                             <option key={opt.value} value={opt.value}>
@@ -331,7 +331,7 @@ export function AddHabitModal({
 
                       {/* Frequency */}
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
                           Frequency
                         </label>
                         <div className="flex gap-3">
@@ -343,7 +343,7 @@ export function AddHabitModal({
                               className={`flex-1 rounded-xl border px-4 py-2.5 text-sm font-medium capitalize transition-all ${
                                 customFrequency === freq
                                   ? 'border-emerald-500 bg-emerald-50 text-emerald-700 ring-2 ring-emerald-500/20 dark:border-emerald-400 dark:bg-emerald-900/20 dark:text-emerald-400'
-                                  : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300'
+                                  : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300'
                               }`}
                               aria-pressed={customFrequency === freq}
                             >

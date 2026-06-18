@@ -1,5 +1,7 @@
 'use client';
 
+/** @module hooks/useFootprint - React hook that computes footprint results, recommendations, and equivalents. */
+
 import { useState, useEffect } from 'react';
 import type { Assessment, Recommendation, FootprintResult } from '@/types';
 import { generateRecommendations } from '@/lib/recommendations/engine';
@@ -19,6 +21,11 @@ interface UseFootprintReturn {
   isLoading: boolean;
 }
 
+/**
+ * Compute the carbon footprint breakdown, recommendations, and real-world equivalents for an assessment.
+ * @param assessment - The assessment to analyze, or null to reset.
+ * @returns Footprint result, ranked recommendations, tangible equivalents, and loading state.
+ */
 export function useFootprint(assessment: Assessment | null): UseFootprintReturn {
   const [result, setResult] = useState<FootprintResult | null>(null);
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);

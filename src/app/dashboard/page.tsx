@@ -48,7 +48,7 @@ export default function DashboardPage() {
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-2xl font-black text-slate-900 dark:text-white">Welcome to CarbonWise!</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Welcome to CarbonWise!</h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Before we can build your dashboard, we need to estimate your carbon footprint. Take a quick 3-minute assessment about your lifestyle habits.
             </p>
@@ -61,7 +61,7 @@ export default function DashboardPage() {
             </Button>
           </Link>
 
-          <p className="text-[11px] text-slate-400 dark:text-slate-500">
+          <p className="text-xs text-slate-400 dark:text-slate-500">
             No registration required. All data is stored privately on your device.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function DashboardPage() {
       {/* Header section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
         <div>
-          <h1 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Your Dashboard</h1>
+          <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Your Dashboard</h1>
           <p className="text-sm text-slate-500 dark:text-slate-400">Manage and track your carbon reduction progress</p>
         </div>
         <Link href="/calculator">

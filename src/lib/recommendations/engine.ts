@@ -1,3 +1,5 @@
+/** @module lib/recommendations/engine - Generates prioritized, personalized carbon reduction recommendations. */
+
 import type { FootprintResult, Recommendation } from '@/types';
 import { RECOMMENDATION_TEMPLATES } from './actions';
 

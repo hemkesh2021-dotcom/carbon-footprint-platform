@@ -1,5 +1,7 @@
 'use client';
 
+/** @module hooks/useAssessment - React hook for managing carbon footprint assessments. */
+
 import { useState, useEffect, useCallback } from 'react';
 import type { Assessment } from '@/types';
 import * as assessmentService from '@/services/assessment.service';
@@ -12,6 +14,7 @@ interface UseAssessmentReturn {
   isLoading: boolean;
 }
 
+/** Manage assessment CRUD operations with automatic state synchronization. */
 export function useAssessment(): UseAssessmentReturn {
   const [assessmentHistory, setAssessmentHistory] = useState<Assessment[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);

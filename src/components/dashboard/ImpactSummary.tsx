@@ -36,7 +36,7 @@ export function ImpactSummary({ result, previousResult }: ImpactSummaryProps) {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-base font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
+          <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
             Sustainability Insights
           </h3>
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">

@@ -47,7 +47,7 @@ export function HabitList({ habits, onMarkComplete, onDelete, onAddClick }: Habi
             className={`rounded-full px-4 py-2 text-sm font-medium transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 ${
               activeFilter === tab.value
                 ? 'bg-emerald-600 text-white shadow-sm dark:bg-emerald-500'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'
             }`}
           >
             {tab.label}
@@ -60,17 +60,17 @@ export function HabitList({ habits, onMarkComplete, onDelete, onAddClick }: Habi
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50 px-6 py-16 text-center dark:border-gray-600 dark:bg-gray-800/50"
+          className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 px-6 py-16 text-center dark:border-slate-600 dark:bg-slate-800/50"
         >
           <span className="mb-4 text-5xl" role="img" aria-hidden="true">
             🌱
           </span>
-          <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
             {habits.length === 0
               ? 'No habits yet'
               : 'No habits in this category'}
           </h3>
-          <p className="mb-6 max-w-sm text-sm text-gray-500 dark:text-gray-400">
+          <p className="mb-6 max-w-sm text-sm text-slate-500 dark:text-slate-400">
             {habits.length === 0
               ? 'Start building eco-friendly habits! Add your first habit to begin tracking.'
               : 'Try selecting a different category or add a new habit.'}

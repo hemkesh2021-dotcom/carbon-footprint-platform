@@ -24,10 +24,10 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
       className="space-y-8"
     >
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
           🛍️ Shopping
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-slate-600 dark:text-slate-400">
           Consumer goods contribute significantly to carbon emissions.
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
           <ShoppingBag className="w-4 h-4 text-purple-500" />
           <label
             htmlFor="clothing-slider"
-            className="text-sm font-semibold text-gray-700 dark:text-gray-300"
+            className="text-sm font-semibold text-slate-700 dark:text-slate-300"
           >
             Clothing items purchased per month
           </label>
@@ -52,7 +52,7 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
             step={1}
             value={data.clothingItemsPerMonth}
             onChange={(e) => update({ clothingItemsPerMonth: Number(e.target.value) })}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
             aria-valuenow={data.clothingItemsPerMonth}
             aria-valuemin={0}
             aria-valuemax={20}
@@ -62,7 +62,7 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
             {data.clothingItemsPerMonth}
           </span>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           Each new clothing item produces ~10 kg of CO₂e on average
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
       <div>
         <div className="flex items-center gap-2 mb-2">
           <Smartphone className="w-4 h-4 text-blue-500" />
-          <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+          <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
             Electronics purchased per year
           </label>
         </div>
@@ -81,12 +81,12 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
             onClick={() => update({ electronicsPerYear: Math.max(0, data.electronicsPerYear - 1) })}
             disabled={data.electronicsPerYear <= 0}
             aria-label="Decrease electronics per year"
-            className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
           >
-            <Minus className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+            <Minus className="w-5 h-5 text-slate-600 dark:text-slate-400" />
           </button>
           <span
-            className="min-w-[3rem] text-center text-2xl font-bold text-gray-900 dark:text-white"
+            className="min-w-[3rem] text-center text-2xl font-bold text-slate-900 dark:text-white"
             aria-live="polite"
           >
             {data.electronicsPerYear}
@@ -96,25 +96,25 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
             onClick={() => update({ electronicsPerYear: Math.min(20, data.electronicsPerYear + 1) })}
             disabled={data.electronicsPerYear >= 20}
             aria-label="Increase electronics per year"
-            className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
           >
-            <Plus className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+            <Plus className="w-5 h-5 text-slate-600 dark:text-slate-400" />
           </button>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           Phones, laptops, tablets, TVs, etc.
         </p>
       </div>
 
       {/* Prefers Second-Hand Toggle */}
-      <div className="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+      <div className="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
         <div className="flex items-center gap-3">
           <Recycle className="w-5 h-5 text-green-500" />
           <div>
-            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
               Do you prefer second-hand items?
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               Thrift stores, refurbished electronics, hand-me-downs
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
           aria-checked={data.prefersSecondHand}
           onClick={() => update({ prefersSecondHand: !data.prefersSecondHand })}
           className={`relative inline-flex h-7 w-12 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
-            data.prefersSecondHand ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-gray-600'
+            data.prefersSecondHand ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
           }`}
         >
           <span

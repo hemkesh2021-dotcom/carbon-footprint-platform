@@ -109,15 +109,15 @@ export function SummaryReport({ assessments }: SummaryReportProps) {
 
   if (assessments.length === 0) {
     return (
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
           Personalized Insights
         </h3>
         <div className="flex h-48 flex-col items-center justify-center text-center">
           <span className="mb-3 text-4xl" role="img" aria-hidden="true">
             🔍
           </span>
-          <p className="max-w-sm text-sm text-gray-500 dark:text-gray-400">
+          <p className="max-w-sm text-sm text-slate-500 dark:text-slate-400">
             Complete your first assessment to get personalized insights and
             actionable recommendations.
           </p>
@@ -127,8 +127,8 @@ export function SummaryReport({ assessments }: SummaryReportProps) {
   }
 
   return (
-    <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-      <h3 className="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+      <h3 className="mb-6 text-lg font-semibold text-slate-900 dark:text-white">
         Personalized Insights
       </h3>
 

@@ -1,5 +1,7 @@
 'use client';
 
+/** @module hooks/useGoals - React hook for managing emission reduction goals. */
+
 import { useState, useEffect, useCallback } from 'react';
 import type { Goal } from '@/types/goal';
 import * as goalService from '@/services/goal.service';
@@ -12,6 +14,7 @@ interface UseGoalsReturn {
   isLoading: boolean;
 }
 
+/** Manage emission reduction goals with CRUD operations and progress tracking. */
 export function useGoals(): UseGoalsReturn {
   const [goals, setGoals] = useState<Goal[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);

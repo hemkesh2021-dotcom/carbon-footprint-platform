@@ -35,7 +35,7 @@ export default function EducationPage() {
     <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8 space-y-12">
       {/* Page Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <h1 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Learn & Understand
         </h1>
         <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -59,7 +59,7 @@ export default function EducationPage() {
 
       {/* Articles Grid */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-emerald-500" />
           Essential Articles
         </h2>
@@ -95,7 +95,7 @@ export default function EducationPage() {
 
       {/* Myths vs Facts Flip Cards */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
           <Sparkles className="w-6 h-6 text-amber-500" />
           Myths vs. Facts
         </h2>
@@ -157,7 +157,7 @@ export default function EducationPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* FAQs */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
             <HelpCircle className="w-6 h-6 text-blue-500" />
             Frequently Asked Questions
           </h2>
@@ -211,7 +211,7 @@ export default function EducationPage() {
 
         {/* Glossary */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+          <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
             <BookOpen className="w-6 h-6 text-purple-500" />
             Glossary of Terms
           </h2>

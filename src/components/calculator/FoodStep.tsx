@@ -43,17 +43,17 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
       className="space-y-8"
     >
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
           🍽️ Food & Diet
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-slate-600 dark:text-slate-400">
           Your diet is one of the biggest factors in your carbon footprint.
         </p>
       </div>
 
       {/* Diet Type Selector */}
       <div>
-        <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
           How would you describe your diet?
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
@@ -66,7 +66,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
               className={`flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
                 data.dietType === diet.value
                   ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 shadow-md'
-                  : 'border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600 bg-white dark:bg-gray-800'
+                  : 'border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-600 bg-white dark:bg-slate-800'
               }`}
             >
               <span className="text-3xl">{diet.emoji}</span>
@@ -74,12 +74,12 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
                 className={`text-sm font-semibold ${
                   data.dietType === diet.value
                     ? 'text-emerald-700 dark:text-emerald-300'
-                    : 'text-gray-700 dark:text-gray-300'
+                    : 'text-slate-700 dark:text-slate-300'
                 }`}
               >
                 {diet.label}
               </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">
+              <span className="text-xs text-slate-500 dark:text-slate-400">
                 {diet.description}
               </span>
               <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
@@ -94,7 +94,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
       <div>
         <label
           htmlFor="local-food-slider"
-          className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2"
         >
           How much of your food is locally sourced?
         </label>
@@ -107,7 +107,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
             step={10}
             value={data.localFoodPercentage}
             onChange={(e) => update({ localFoodPercentage: Number(e.target.value) })}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
             aria-valuenow={data.localFoodPercentage}
             aria-valuemin={0}
             aria-valuemax={100}
@@ -117,7 +117,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
             {data.localFoodPercentage}%
           </span>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           🌍 Local food has lower transport emissions
         </p>
       </div>
@@ -126,7 +126,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
       <div>
         <label
           htmlFor="food-waste-select"
-          className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2"
         >
           How often do you waste food?
         </label>
@@ -140,7 +140,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
               className={`flex-1 py-3 px-4 rounded-xl border-2 text-sm font-semibold transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
                 data.foodWasteFrequency === option.value
                   ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
-                  : 'border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-emerald-300 dark:hover:border-emerald-600 bg-white dark:bg-gray-800'
+                  : 'border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-300 dark:hover:border-emerald-600 bg-white dark:bg-slate-800'
               }`}
             >
               {option.label}

@@ -50,6 +50,7 @@ export const DEFAULT_PUBLIC_TRANSPORT_FACTOR = PUBLIC_TRANSPORT_FACTORS.bus;
 // Energy — kg CO₂e per unit
 // ────────────────────────────────────────────────────────────────
 
+/** Per-unit energy emission factors in kg CO₂e. */
 export const ENERGY_EMISSION_FACTORS = {
   /** Grid electricity: kg CO₂e per kWh. */
   gridElectricity: 0.42,
@@ -93,6 +94,7 @@ export const FOOD_WASTE_FACTORS: Readonly<Record<string, number>> = {
 // Shopping — kg CO₂e per item
 // ────────────────────────────────────────────────────────────────
 
+/** Per-item shopping emission factors in kg CO₂e. */
 export const SHOPPING_EMISSION_FACTORS = {
   /** Fast-fashion clothing item. */
   fastFashion: 10,
@@ -106,6 +108,7 @@ export const SHOPPING_EMISSION_FACTORS = {
 // Waste — kg CO₂e per kg of waste
 // ────────────────────────────────────────────────────────────────
 
+/** Per-kg waste emission factors in kg CO₂e. */
 export const WASTE_EMISSION_FACTORS = {
   /** Waste sent to landfill: kg CO₂e per kg. */
   landfill: 0.58,
@@ -163,6 +166,7 @@ export const BUSINESS_CLASS_MULTIPLIER = 2.0;
 // Equivalents — for comparison / visualisation
 // ────────────────────────────────────────────────────────────────
 
+/** Real-world equivalents for converting CO₂e into tangible comparisons. */
 export const EQUIVALENTS = {
   /** kg CO₂e emitted per km driven in an average petrol car. */
   carKmPerKgCO2e: 1 / 0.21,

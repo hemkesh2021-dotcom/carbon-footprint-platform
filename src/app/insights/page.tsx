@@ -16,7 +16,7 @@ export default function InsightsPage() {
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="flex flex-col items-center gap-3">
           <Loader2 className="h-8 w-8 animate-spin text-emerald-600" />
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             Loading your insights...
           </p>
         </div>
@@ -32,11 +32,11 @@ export default function InsightsPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <h1 className="flex items-center gap-3 text-3xl font-bold text-gray-900 dark:text-white">
+        <h1 className="flex items-center gap-3 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           <BarChart3 className="h-8 w-8 text-emerald-600" />
           Insights &amp; Progress
         </h1>
-        <p className="mt-2 max-w-2xl text-gray-600 dark:text-gray-400">
+        <p className="mt-2 max-w-2xl text-slate-600 dark:text-slate-400">
           Track your carbon footprint over time, compare assessments, and
           discover actionable insights to reduce your environmental impact.
         </p>
@@ -53,10 +53,10 @@ export default function InsightsPage() {
             <span className="mb-4 text-6xl" role="img" aria-hidden="true">
               📊
             </span>
-            <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+            <h2 className="mb-2 text-2xl font-bold text-slate-900 dark:text-white">
               No Data Yet
             </h2>
-            <p className="max-w-md text-gray-600 dark:text-gray-400">
+            <p className="max-w-md text-slate-600 dark:text-slate-400">
               Complete your first carbon footprint assessment to unlock
               personalized insights, track your progress, and discover ways to
               reduce your impact.

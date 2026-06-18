@@ -126,21 +126,21 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-center p-8 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border border-emerald-200 dark:border-emerald-800"
       >
-        <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
+        <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
           Your Annual Carbon Footprint
         </p>
         <div className={`text-6xl sm:text-7xl font-extrabold ${getComparisonColor()} mb-2`}>
           <AnimatedCounter target={totalYearly} />
         </div>
-        <p className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
+        <p className="text-xl font-semibold text-slate-700 dark:text-slate-300 mb-4">
           kg CO₂e / year
         </p>
-        <div className="flex justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
           <div>
-            <span className="font-bold text-gray-700 dark:text-gray-300">{totalMonthly.toLocaleString()}</span> kg/month
+            <span className="font-bold text-slate-700 dark:text-slate-300">{totalMonthly.toLocaleString()}</span> kg/month
           </div>
           <div>
-            <span className="font-bold text-gray-700 dark:text-gray-300">{totalDaily.toLocaleString()}</span> kg/day
+            <span className="font-bold text-slate-700 dark:text-slate-300">{totalDaily.toLocaleString()}</span> kg/day
           </div>
         </div>
         <p className={`mt-4 text-sm font-medium ${getComparisonColor()}`}>
@@ -153,9 +153,9 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
+        className="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm"
       >
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
           Category Breakdown
         </h3>
         <div className="h-72">
@@ -188,7 +188,7 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
                 verticalAlign="bottom"
                 height={36}
                 formatter={(value: string) => (
-                  <span className="text-sm text-gray-700 dark:text-gray-300">{value}</span>
+                  <span className="text-sm text-slate-700 dark:text-slate-300">{value}</span>
                 )}
               />
             </PieChart>
@@ -203,8 +203,8 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
                   className="w-3 h-3 rounded-full shrink-0"
                   style={{ backgroundColor: entry.color }}
                 />
-                <span className="text-gray-600 dark:text-gray-400">{entry.name}:</span>
-                <span className="font-semibold text-gray-900 dark:text-white">{percentage}%</span>
+                <span className="text-slate-600 dark:text-slate-400">{entry.name}:</span>
+                <span className="font-semibold text-slate-900 dark:text-white">{percentage}%</span>
               </div>
             );
           })}
@@ -216,9 +216,9 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        className="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
+        className="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm"
       >
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
           How You Compare
         </h3>
         <div className="h-48">
@@ -252,7 +252,7 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
       >
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
           What Does This Mean?
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -262,11 +262,11 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.9 + i * 0.15 }}
-              className="flex flex-col items-center gap-3 p-5 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm text-center"
+              className="flex flex-col items-center gap-3 p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm text-center"
             >
               <span className="text-3xl">{eq.emoji}</span>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                That&apos;s like <span className="font-bold text-gray-900 dark:text-white">{eq.label}</span>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                That&apos;s like <span className="font-bold text-slate-900 dark:text-white">{eq.label}</span>
               </p>
             </motion.div>
           ))}
@@ -279,7 +279,7 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.0 }}
       >
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
           <Lightbulb className="w-5 h-5 text-amber-500" />
           Top Recommendations
         </h3>
@@ -290,16 +290,16 @@ export default function ResultsView({ result, onRecalculate }: ResultsViewProps)
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.1 + i * 0.15 }}
-              className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
                 <TrendingDown className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div className="flex-1">
-                <p className="font-semibold text-gray-900 dark:text-white">
+                <p className="font-semibold text-slate-900 dark:text-white">
                   {rec.title}
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                   {rec.description}
                 </p>
                 <div className="flex items-center gap-3 mt-2">

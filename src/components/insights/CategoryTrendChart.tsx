@@ -46,8 +46,8 @@ function CategoryTooltip({ active, payload, label }: CategoryTooltipProps) {
   const total = payload.reduce((sum, entry) => sum + entry.value, 0);
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-lg dark:border-gray-700 dark:bg-gray-800">
-      <p className="mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+    <div className="rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-lg dark:border-slate-700 dark:bg-slate-800">
+      <p className="mb-2 text-xs font-medium text-slate-500 dark:text-slate-400">
         {label}
       </p>
       {payload.map((entry) => (
@@ -57,21 +57,21 @@ function CategoryTooltip({ active, payload, label }: CategoryTooltipProps) {
               className="inline-block h-2.5 w-2.5 rounded-full"
               style={{ backgroundColor: entry.color }}
             />
-            <span className="text-xs capitalize text-gray-700 dark:text-gray-300">
+            <span className="text-xs capitalize text-slate-700 dark:text-slate-300">
               {entry.name}
             </span>
           </span>
-          <span className="text-xs font-medium text-gray-900 dark:text-white">
+          <span className="text-xs font-medium text-slate-900 dark:text-white">
             {formatCO2(entry.value)}
           </span>
         </div>
       ))}
-      <div className="mt-2 border-t border-gray-200 pt-2 dark:border-gray-700">
+      <div className="mt-2 border-t border-slate-200 pt-2 dark:border-slate-700">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+          <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
             Total
           </span>
-          <span className="text-xs font-bold text-gray-900 dark:text-white">
+          <span className="text-xs font-bold text-slate-900 dark:text-white">
             {formatCO2(total)}
           </span>
         </div>
@@ -110,15 +110,15 @@ export function CategoryTrendChart({ assessments }: CategoryTrendChartProps) {
 
   if (assessments.length === 0) {
     return (
-      <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+      <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
           Category Breakdown
         </h3>
         <div className="flex h-64 flex-col items-center justify-center text-center">
           <span className="mb-3 text-4xl" role="img" aria-hidden="true">
             📊
           </span>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             Complete an assessment to see your category breakdown.
           </p>
         </div>
@@ -127,8 +127,8 @@ export function CategoryTrendChart({ assessments }: CategoryTrendChartProps) {
   }
 
   return (
-    <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-      <h3 className="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+      <h3 className="mb-6 text-lg font-semibold text-slate-900 dark:text-white">
         Category Breakdown
       </h3>
       <div className="h-72 w-full">

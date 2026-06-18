@@ -177,11 +177,11 @@ export default function CalculatorWizard() {
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+          <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
             Step {currentStep + 1} of {TOTAL_STEPS}
           </span>
           {currentStep === 0 && (
-            <span className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
+            <span className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
               <Clock className="w-3.5 h-3.5" />
               Takes ~3 minutes
             </span>
@@ -193,7 +193,7 @@ export default function CalculatorWizard() {
           {Array.from({ length: TOTAL_STEPS }).map((_, i) => (
             <div
               key={i}
-              className="flex-1 h-2 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700"
+              className="flex-1 h-2 rounded-full overflow-hidden bg-slate-200 dark:bg-slate-700"
             >
               <motion.div
                 className="h-full rounded-full bg-emerald-500"
@@ -214,8 +214,8 @@ export default function CalculatorWizard() {
                   i === currentStep
                     ? 'text-emerald-600 dark:text-emerald-400'
                     : i < currentStep
-                    ? 'text-gray-500 dark:text-gray-400'
-                    : 'text-gray-400 dark:text-gray-500'
+                    ? 'text-slate-500 dark:text-slate-400'
+                    : 'text-slate-400 dark:text-slate-500'
                 }`}
               >
                 {i < currentStep ? (
@@ -250,12 +250,12 @@ export default function CalculatorWizard() {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-between mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex justify-between mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
         <button
           type="button"
           onClick={goBack}
           disabled={currentStep === 0}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
         >
           <ChevronLeft className="w-4 h-4" />
           Back

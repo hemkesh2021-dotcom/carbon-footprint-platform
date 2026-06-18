@@ -12,7 +12,7 @@ const DAYS_IN_WEEK = 7;
 const DAY_LABELS = ['', 'Mon', '', 'Wed', '', 'Fri', ''] as const;
 
 const INTENSITY_COLORS = [
-  'bg-gray-100 dark:bg-gray-700',          // 0 habits
+  'bg-slate-100 dark:bg-slate-700',          // 0 habits
   'bg-emerald-200 dark:bg-emerald-800',    // 1 habit
   'bg-emerald-400 dark:bg-emerald-600',    // 2 habits
   'bg-emerald-600 dark:bg-emerald-400',    // 3+ habits
@@ -142,10 +142,10 @@ export function StreakCalendar({ habits }: StreakCalendarProps) {
 
   return (
     <section
-      className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800"
+      className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800"
       aria-label="Habit streak calendar"
     >
-      <h3 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+      <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
         Activity Overview
       </h3>
 
@@ -156,7 +156,7 @@ export function StreakCalendar({ habits }: StreakCalendarProps) {
             {DAY_LABELS.map((label, i) => (
               <div
                 key={i}
-                className="flex h-3.5 w-6 items-center text-[10px] font-medium text-gray-500 dark:text-gray-400"
+                className="flex h-3.5 w-6 items-center text-[10px] font-medium text-slate-500 dark:text-slate-400"
               >
                 {label}
               </div>
@@ -170,7 +170,7 @@ export function StreakCalendar({ habits }: StreakCalendarProps) {
               {monthLabels.map((m, i) => (
                 <span
                   key={i}
-                  className="absolute text-[10px] font-medium text-gray-500 dark:text-gray-400"
+                  className="absolute text-[10px] font-medium text-slate-500 dark:text-slate-400"
                   style={{ left: `${m.weekIndex * 18}px` }}
                 >
                   {m.label}
@@ -209,7 +209,7 @@ export function StreakCalendar({ habits }: StreakCalendarProps) {
 
       {/* Legend */}
       <div className="mt-4 flex items-center gap-2">
-        <span className="text-xs text-gray-500 dark:text-gray-400">Less</span>
+        <span className="text-xs text-slate-500 dark:text-slate-400">Less</span>
         {LEGEND_ITEMS.map((item) => (
           <div
             key={item.label}
@@ -217,20 +217,20 @@ export function StreakCalendar({ habits }: StreakCalendarProps) {
             title={`${item.label} habits completed`}
           />
         ))}
-        <span className="text-xs text-gray-500 dark:text-gray-400">More</span>
+        <span className="text-xs text-slate-500 dark:text-slate-400">More</span>
       </div>
 
       {/* Tooltip (portal-free, fixed position) */}
       {tooltipData && (
         <div
-          className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-full rounded-lg bg-gray-900 px-3 py-1.5 text-xs text-white shadow-lg dark:bg-gray-700"
+          className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-full rounded-lg bg-slate-900 px-3 py-1.5 text-xs text-white shadow-lg dark:bg-slate-700"
           style={{
             left: tooltipData.x,
             top: tooltipData.y - 8,
           }}
         >
           <div className="font-medium">{tooltipData.date}</div>
-          <div className="text-gray-300">
+          <div className="text-slate-300">
             {tooltipData.count} habit{tooltipData.count !== 1 ? 's' : ''} completed
           </div>
         </div>

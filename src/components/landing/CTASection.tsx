@@ -77,7 +77,7 @@ export default function CTASection() {
 
         {/* Headline */}
         <motion.h2
-          className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-6xl"
+          className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -125,7 +125,7 @@ export default function CTASection() {
         >
           <Link
             href="/calculator"
-            className="group relative inline-flex items-center gap-3 rounded-full bg-white px-10 py-5 text-lg font-bold text-emerald-700 shadow-2xl shadow-black/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="group relative inline-flex items-center gap-3 rounded-full bg-white px-10 py-5 text-base font-bold text-emerald-700 shadow-2xl shadow-black/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             <span>Start Your Journey</span>
             <ArrowRight

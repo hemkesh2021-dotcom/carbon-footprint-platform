@@ -1,8 +1,11 @@
+/** @module services/habit - Habit tracking service with streak calculation and localStorage persistence. */
+
 import type { Habit, HabitTemplate } from '@/types';
 import { storage } from './storage';
 
 const STORAGE_KEY = 'habits';
 
+/** Pre-defined habit templates users can adopt for reducing their carbon footprint. */
 export const HABIT_TEMPLATES: HabitTemplate[] = [
   { id: 'no-car-monday', name: 'No-Car Monday', category: 'transport', icon: '🚌', frequency: 'weekly', estimatedReduction: 10 },
   { id: 'meatless-wednesday', name: 'Meatless Wednesday', category: 'food', icon: '🥬', frequency: 'weekly', estimatedReduction: 12 },
@@ -14,10 +17,12 @@ export const HABIT_TEMPLATES: HabitTemplate[] = [
   { id: 'buy-local', name: 'Buy Local Produce', category: 'food', icon: '🛒', frequency: 'weekly', estimatedReduction: 6 },
 ];
 
+/** Return the list of available habit templates. */
 export async function getHabitTemplates(): Promise<HabitTemplate[]> {
   return HABIT_TEMPLATES;
 }
 
+/** Retrieve all tracked habits with recalculated streaks. */
 export async function getHabits(): Promise<Habit[]> {
   const habits = storage.get<Habit[]>(STORAGE_KEY);
   if (!habits) return [];
@@ -26,6 +31,10 @@ export async function getHabits(): Promise<Habit[]> {
   return habits.map(recalculateStreak);
 }
 
+/**
+ * Add a new habit to the tracker.
+ * @param habitData - Habit data; `id`, `streakCount`, `completionHistory`, `createdAt`, and `isActive` are auto-generated.
+ */
 export async function addHabit(habitData: Omit<Habit, 'id' | 'streakCount' | 'completionHistory' | 'createdAt' | 'isActive'> & { id?: string }): Promise<void> {
   const habits = await getHabits();
   
@@ -42,12 +51,18 @@ export async function addHabit(habitData: Omit<Habit, 'id' | 'streakCount' | 'co
   storage.set(STORAGE_KEY, habits);
 }
 
+/** Remove a tracked habit by its unique ID. */
 export async function removeHabit(id: string): Promise<void> {
   const habits = await getHabits();
   const filtered = habits.filter((h) => h.id !== id);
   storage.set(STORAGE_KEY, filtered);
 }
 
+/**
+ * Toggle completion status for a habit on a given date.
+ * @param id - The habit's unique ID.
+ * @param dateStr - ISO date string (YYYY-MM-DD); defaults to today.
+ */
 export async function markComplete(id: string, dateStr?: string): Promise<void> {
   const habits = await getHabits();
   const index = habits.findIndex((h) => h.id === id);

@@ -1,13 +1,20 @@
+/** @module services/goal - Goal management service for emission reduction targets. */
+
 import type { Goal } from '@/types';
 import { storage } from './storage';
 
 const STORAGE_KEY = 'goals';
 
+/** Retrieve all saved emission reduction goals. */
 export async function getGoals(): Promise<Goal[]> {
   const goals = storage.get<Goal[]>(STORAGE_KEY);
   return goals || [];
 }
 
+/**
+ * Create a new emission reduction goal.
+ * @param goalData - Goal data without the auto-generated ID.
+ */
 export async function addGoal(goalData: Omit<Goal, 'id'>): Promise<void> {
   const goals = await getGoals();
   const newGoal: Goal = {
@@ -18,6 +25,11 @@ export async function addGoal(goalData: Omit<Goal, 'id'>): Promise<void> {
   storage.set(STORAGE_KEY, goals);
 }
 
+/**
+ * Update progress toward a goal and auto-mark as completed if the target is met.
+ * @param id - The goal's unique ID.
+ * @param progress - The new current value for the goal.
+ */
 export async function updateProgress(id: string, progress: number): Promise<void> {
   const goals = await getGoals();
   const index = goals.findIndex((g) => g.id === id);
@@ -27,14 +39,12 @@ export async function updateProgress(id: string, progress: number): Promise<void
   if (!goal) return;
 
   goal.currentValue = progress;
-  // If currentValue (e.g. reduction %) meets or exceeds targetReduction %, it is completed
-  // Wait, in types/goal.ts:
-  // export interface Goal { id: string; title: string; targetReduction: number; category?: EmissionCategory; deadline: string; baselineValue: number; currentValue: number; createdAt: string; isCompleted: boolean; }
   goal.isCompleted = goal.currentValue >= goal.targetReduction;
 
   storage.set(STORAGE_KEY, goals);
 }
 
+/** Remove a goal by its unique ID. */
 export async function removeGoal(id: string): Promise<void> {
   const goals = await getGoals();
   const filtered = goals.filter((g) => g.id !== id);

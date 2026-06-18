@@ -1,5 +1,7 @@
 'use client';
 
+/** @module hooks/useHabits - React hook for tracking sustainable habits and streaks. */
+
 import { useState, useEffect, useCallback } from 'react';
 import type { Habit, HabitTemplate } from '@/types/habit';
 import * as habitService from '@/services/habit.service';
@@ -13,6 +15,7 @@ interface UseHabitsReturn {
   isLoading: boolean;
 }
 
+/** Manage sustainable habit tracking with templates, completion toggling, and streak calculation. */
 export function useHabits(): UseHabitsReturn {
   const [habits, setHabits] = useState<Habit[]>([]);
   const [templates, setTemplates] = useState<HabitTemplate[]>([]);

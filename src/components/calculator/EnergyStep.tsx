@@ -24,10 +24,10 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
       className="space-y-8"
     >
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
           ⚡ Home Energy
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-slate-600 dark:text-slate-400">
           Tell us about your household energy consumption.
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
           <Lightbulb className="w-4 h-4 text-amber-500" />
           <label
             htmlFor="electricity-slider"
-            className="text-sm font-semibold text-gray-700 dark:text-gray-300"
+            className="text-sm font-semibold text-slate-700 dark:text-slate-300"
           >
             Monthly electricity usage
           </label>
@@ -52,7 +52,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
             step={50}
             value={data.monthlyElectricityKwh}
             onChange={(e) => update({ monthlyElectricityKwh: Number(e.target.value) })}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
             aria-valuenow={data.monthlyElectricityKwh}
             aria-valuemin={0}
             aria-valuemax={1000}
@@ -62,7 +62,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
             {data.monthlyElectricityKwh} kWh
           </span>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           💡 Average household uses ~300 kWh/month
         </p>
       </div>
@@ -73,7 +73,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
           <Sun className="w-4 h-4 text-yellow-500" />
           <label
             htmlFor="renewable-slider"
-            className="text-sm font-semibold text-gray-700 dark:text-gray-300"
+            className="text-sm font-semibold text-slate-700 dark:text-slate-300"
           >
             Renewable energy percentage
           </label>
@@ -87,7 +87,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
             step={10}
             value={data.renewablePercentage}
             onChange={(e) => update({ renewablePercentage: Number(e.target.value) })}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
             aria-valuenow={data.renewablePercentage}
             aria-valuemin={0}
             aria-valuemax={100}
@@ -97,20 +97,20 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
             {data.renewablePercentage}%
           </span>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           🌱 Solar panels or green energy tariff? Count it here
         </p>
       </div>
 
       {/* Gas Toggle */}
-      <div className="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+      <div className="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
         <div className="flex items-center gap-3">
           <Flame className="w-5 h-5 text-orange-500" />
           <div>
-            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
               Do you use natural gas?
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               For heating, cooking, or hot water
             </p>
           </div>
@@ -121,7 +121,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
           aria-checked={data.usesGas}
           onClick={() => update({ usesGas: !data.usesGas })}
           className={`relative inline-flex h-7 w-12 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
-            data.usesGas ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-gray-600'
+            data.usesGas ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-600'
           }`}
         >
           <span
@@ -142,7 +142,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
         >
           <label
             htmlFor="gas-slider"
-            className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+            className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2"
           >
             Monthly gas usage
           </label>
@@ -155,7 +155,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
               step={10}
               value={data.monthlyGasM3}
               onChange={(e) => update({ monthlyGasM3: Number(e.target.value) })}
-              className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+              className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               aria-valuenow={data.monthlyGasM3}
               aria-valuemin={0}
               aria-valuemax={200}
@@ -165,7 +165,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
               {data.monthlyGasM3} m³
             </span>
           </div>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
             Check your gas bill for exact figures
           </p>
         </motion.div>
@@ -177,7 +177,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
           <Snowflake className="w-4 h-4 text-blue-500" />
           <label
             htmlFor="ac-slider"
-            className="text-sm font-semibold text-gray-700 dark:text-gray-300"
+            className="text-sm font-semibold text-slate-700 dark:text-slate-300"
           >
             AC / Heating hours per day
           </label>
@@ -191,7 +191,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
             step={1}
             value={data.acHeatingHoursPerDay}
             onChange={(e) => update({ acHeatingHoursPerDay: Number(e.target.value) })}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
             aria-valuenow={data.acHeatingHoursPerDay}
             aria-valuemin={0}
             aria-valuemax={24}
@@ -201,7 +201,7 @@ export default function EnergyStep({ data, onChange }: EnergyStepProps) {
             {data.acHeatingHoursPerDay} hrs
           </span>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           ❄️ Include both air conditioning and heating time
         </p>
       </div>

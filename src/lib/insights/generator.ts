@@ -1,3 +1,5 @@
+/** @module lib/insights/generator - Generates personalized insight messages from assessment history. */
+
 import type { AssessmentData, EmissionCategory, FootprintResult } from '@/types';
 import { calculateTotalFootprint } from '../calculator/calculator';
 import { formatPercentage } from '@/utils/formatting';

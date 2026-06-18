@@ -18,7 +18,7 @@ export default function HabitsPage() {
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="flex flex-col items-center gap-3">
           <Loader2 className="h-8 w-8 animate-spin text-emerald-600" />
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             Loading your habits...
           </p>
         </div>
@@ -34,11 +34,11 @@ export default function HabitsPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <h1 className="flex items-center gap-3 text-3xl font-bold text-gray-900 dark:text-white">
+        <h1 className="flex items-center gap-3 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           <Leaf className="h-8 w-8 text-emerald-600" />
           Habit Tracker
         </h1>
-        <p className="mt-2 max-w-2xl text-gray-600 dark:text-gray-400">
+        <p className="mt-2 max-w-2xl text-slate-600 dark:text-slate-400">
           Build sustainable habits to reduce your carbon footprint. Track your
           daily progress and maintain your streaks.
         </p>
@@ -55,10 +55,10 @@ export default function HabitsPage() {
             <span className="mb-4 text-6xl" role="img" aria-hidden="true">
               🌍
             </span>
-            <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+            <h2 className="mb-2 text-2xl font-bold text-slate-900 dark:text-white">
               Start Your Green Journey
             </h2>
-            <p className="mb-6 max-w-md text-gray-600 dark:text-gray-400">
+            <p className="mb-6 max-w-md text-slate-600 dark:text-slate-400">
               Every small action counts! Add your first eco-friendly habit and
               start tracking your impact on the planet.
             </p>

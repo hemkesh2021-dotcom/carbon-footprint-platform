@@ -35,10 +35,10 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
       className="space-y-8"
     >
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
           ✈️ Travel
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-slate-600 dark:text-slate-400">
           Long-distance travel and holidays – how far do you fly?
         </p>
       </div>
@@ -55,7 +55,7 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
       <div>
         <div className="flex items-center gap-2 mb-2">
           <Plane className="w-4 h-4 text-sky-500" />
-          <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+          <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
             Holiday/leisure flights per year
           </label>
         </div>
@@ -65,12 +65,12 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
             onClick={() => update({ flightsPerYear: Math.max(0, data.flightsPerYear - 1) })}
             disabled={data.flightsPerYear <= 0}
             aria-label="Decrease flights per year"
-            className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
           >
-            <Minus className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+            <Minus className="w-5 h-5 text-slate-600 dark:text-slate-400" />
           </button>
           <span
-            className="min-w-[3rem] text-center text-2xl font-bold text-gray-900 dark:text-white"
+            className="min-w-[3rem] text-center text-2xl font-bold text-slate-900 dark:text-white"
             aria-live="polite"
           >
             {data.flightsPerYear}
@@ -80,19 +80,19 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
             onClick={() => update({ flightsPerYear: Math.min(50, data.flightsPerYear + 1) })}
             disabled={data.flightsPerYear >= 50}
             aria-label="Increase flights per year"
-            className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
           >
-            <Plus className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+            <Plus className="w-5 h-5 text-slate-600 dark:text-slate-400" />
           </button>
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
           Round trips count as 2 flights
         </p>
       </div>
 
       {/* Average Flight Distance */}
       <div>
-        <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
           Average flight distance
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -105,7 +105,7 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
               className={`flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
                 data.averageFlightDistance === option.value
                   ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 shadow-md'
-                  : 'border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600 bg-white dark:bg-gray-800'
+                  : 'border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-600 bg-white dark:bg-slate-800'
               }`}
             >
               <span className="text-2xl">{option.emoji}</span>
@@ -113,12 +113,12 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
                 className={`text-sm font-semibold ${
                   data.averageFlightDistance === option.value
                     ? 'text-emerald-700 dark:text-emerald-300'
-                    : 'text-gray-700 dark:text-gray-300'
+                    : 'text-slate-700 dark:text-slate-300'
                 }`}
               >
                 {option.label}
               </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">
+              <span className="text-xs text-slate-500 dark:text-slate-400">
                 {option.description}
               </span>
             </button>
@@ -130,12 +130,12 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
       <div>
         <label
           htmlFor="business-split-slider"
-          className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2"
         >
           Business vs Personal split
         </label>
         <div className="flex items-center gap-4">
-          <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">Personal</span>
+          <span className="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">Personal</span>
           <input
             id="business-split-slider"
             type="range"
@@ -144,13 +144,13 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
             step={10}
             value={data.businessTravelPercentage}
             onChange={(e) => update({ businessTravelPercentage: Number(e.target.value) })}
-            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
             aria-valuenow={data.businessTravelPercentage}
             aria-valuemin={0}
             aria-valuemax={100}
             aria-label="Business travel percentage"
           />
-          <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">Business</span>
+          <span className="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">Business</span>
         </div>
         <p className="text-center text-sm font-medium text-emerald-600 dark:text-emerald-400 mt-2">
           {data.businessTravelPercentage}% Business / {100 - data.businessTravelPercentage}% Personal

@@ -1,5 +1,8 @@
+/** @module lib/recommendations/actions - Curated library of carbon reduction recommendation templates. */
+
 import type { Recommendation } from '@/types';
 
+/** Curated list of actionable carbon reduction recommendations across all emission categories. */
 export const RECOMMENDATION_TEMPLATES: Omit<Recommendation, 'isAdopted'>[] = [
   // Transport
   {

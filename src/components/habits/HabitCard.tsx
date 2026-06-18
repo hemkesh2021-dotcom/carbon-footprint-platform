@@ -96,14 +96,14 @@ export function HabitCard({ habit, onMarkComplete, onDelete }: HabitCardProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="relative rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
+      className="relative rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
       aria-label={`Habit: ${habit.name}`}
     >
       {/* Delete button */}
       <button
         onClick={handleDelete}
         disabled={isDeleting}
-        className="absolute right-3 top-3 rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-red-50 hover:text-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 dark:hover:bg-red-900/20 dark:hover:text-red-400"
+        className="absolute right-3 top-3 rounded-lg p-1.5 text-slate-400 transition-colors hover:bg-red-50 hover:text-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 dark:hover:bg-red-900/20 dark:hover:text-red-400"
         aria-label={`Delete habit: ${habit.name}`}
       >
         <Trash2 className="h-4 w-4" />
@@ -115,7 +115,7 @@ export function HabitCard({ habit, onMarkComplete, onDelete }: HabitCardProps) {
           {habit.icon}
         </span>
         <div className="min-w-0 flex-1">
-          <h3 className="truncate text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="truncate text-lg font-semibold text-slate-900 dark:text-white">
             {habit.name}
           </h3>
           <Badge variant="neutral">{habit.category}</Badge>
@@ -152,7 +152,7 @@ export function HabitCard({ habit, onMarkComplete, onDelete }: HabitCardProps) {
             const completed = habit.completionHistory?.[dateStr] ?? false;
             return (
               <div key={dateStr} className="flex flex-col items-center gap-1">
-                <span className="text-[10px] font-medium text-gray-500 dark:text-gray-400">
+                <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400">
                   {DAY_LABELS[i]}
                 </span>
                 <motion.div
@@ -171,7 +171,7 @@ export function HabitCard({ habit, onMarkComplete, onDelete }: HabitCardProps) {
       </div>
 
       {/* CO₂ savings */}
-      <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">
+      <p className="mb-4 text-xs text-slate-500 dark:text-slate-400">
         ~{formatCO2(habit.estimatedReduction ?? 0)} saved / month
       </p>
 
