@@ -227,7 +227,7 @@ function StatsRow() {
           <p className="text-2xl font-bold text-emerald-400 dark:text-emerald-300">
             {stat.value}
           </p>
-          <p className="mt-1 text-sm text-slate-400 dark:text-slate-500">
+          <p className="mt-1 text-sm text-slate-300">
             {stat.label}
           </p>
         </motion.div>
@@ -352,7 +352,7 @@ export default function HeroSection() {
 
         {/* Subheadline */}
         <motion.p
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300/90 sm:text-xl dark:text-slate-400"
+          className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300/90 sm:text-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}

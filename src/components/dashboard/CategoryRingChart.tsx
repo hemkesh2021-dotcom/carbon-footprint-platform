@@ -90,7 +90,7 @@ export function CategoryRingChart({ result }: CategoryRingChartProps) {
                 <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none mt-1">
                   {activeItem.name}
                 </span>
-                <span className="text-sm font-black text-slate-800 dark:text-slate-100 mt-0.5">
+                <span className="text-sm font-extrabold text-slate-800 dark:text-slate-100 mt-0.5">
                   {activeItem.percentage}%
                 </span>
               </>
@@ -99,7 +99,7 @@ export function CategoryRingChart({ result }: CategoryRingChartProps) {
                 <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none">
                   Total
                 </span>
-                <span className="text-base font-black text-slate-800 dark:text-slate-100 mt-0.5">
+                <span className="text-base font-extrabold text-slate-800 dark:text-slate-100 mt-0.5">
                   {Math.round(result.totalYearly / 1000).toFixed(1)}t
                 </span>
                 <span className="text-[10px] text-slate-400 dark:text-slate-500">CO₂e/yr</span>

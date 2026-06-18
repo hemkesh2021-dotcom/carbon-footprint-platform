@@ -83,7 +83,7 @@ export function FootprintScoreCard({ result, previousResult }: FootprintScoreCar
             <span className="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
               Emissions Rate
             </span>
-            <div className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tabular-nums tracking-tight">
+            <div className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tabular-nums tracking-tight">
               {formattedVal}
             </div>
             <span className="text-sm font-medium text-slate-500 dark:text-slate-400">

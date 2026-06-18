@@ -296,7 +296,7 @@ function ArticleDrawer({ article }: ArticleDrawerProps) {
                   {article.content.split('\n').map((line, idx) => {
                     if (line.startsWith('## ')) {
                       return (
-                        <h3 key={idx} className="text-xl font-black text-slate-800 dark:text-white pt-4">
+                        <h3 key={idx} className="text-xl font-bold text-slate-800 dark:text-white pt-4">
                           {line.replace('## ', '')}
                         </h3>
                       );

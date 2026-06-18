@@ -169,7 +169,7 @@ describe('storage service', () => {
     it('returns null or does nothing when window is undefined (SSR mode)', () => {
       const originalWindow = global.window;
       // Temporarily remove global.window to simulate SSR
-      // @ts-ignore
+      // @ts-expect-error - deleting window to simulate SSR environment
       delete global.window;
 
       expect(storage.get('theme')).toBeNull();
