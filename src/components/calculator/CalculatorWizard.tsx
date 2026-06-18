@@ -210,7 +210,7 @@ export default function CalculatorWizard() {
           {STEP_LABELS.map((label, i) => (
             <div key={label} className="flex-1 text-center">
               <span
-                className={`text-xs font-medium ${
+                className={`inline-flex items-center justify-center gap-1 text-xs font-medium ${
                   i === currentStep
                     ? 'text-emerald-600 dark:text-emerald-400'
                     : i < currentStep
@@ -218,14 +218,8 @@ export default function CalculatorWizard() {
                     : 'text-slate-400 dark:text-slate-500'
                 }`}
               >
-                {i < currentStep ? (
-                  <span className="flex items-center justify-center gap-0.5">
-                    <CheckCircle2 className="w-3 h-3" />
-                    {label}
-                  </span>
-                ) : (
-                  label
-                )}
+                {i < currentStep && <CheckCircle2 className="w-3 h-3 shrink-0" />}
+                <span>{label}</span>
               </span>
             </div>
           ))}

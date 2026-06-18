@@ -15,7 +15,6 @@ __tests__
 jest.config.ts
 jest.setup.ts
 eslint.config.mjs
-postcss.config.mjs
 tailwind.config.ts
 cloudbuild.yaml
 service.yaml

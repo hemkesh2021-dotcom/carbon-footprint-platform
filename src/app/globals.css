@@ -184,6 +184,24 @@ body {
   animation: spin 0.7s linear infinite;
 }
 
+/* ─── 3D Card Flipping utilities ────────────────────────────────────── */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
 /* ─── Reduced Motion ───────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,

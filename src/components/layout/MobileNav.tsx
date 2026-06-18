@@ -102,7 +102,10 @@ function MobileNav({ isOpen, onClose, links }: MobileNavProps) {
           >
             {/* Close button */}
             <div className="flex items-center justify-between px-5 h-16 border-b border-slate-200 dark:border-slate-700">
-              <span className="text-lg font-bold text-gradient">🌱 CarbonWise</span>
+              <div className="flex items-center gap-2 text-lg font-bold">
+                <span aria-hidden="true">🌱</span>
+                <span className="text-gradient">CarbonWise</span>
+              </div>
               <button
                 onClick={onClose}
                 className="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 cursor-pointer"
