@@ -1,5 +1,8 @@
 'use client';
 
+/** @module SummaryReport - Component or utility for SummaryReport */
+
+
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/Badge';

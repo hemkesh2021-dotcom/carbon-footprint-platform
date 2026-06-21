@@ -1,5 +1,8 @@
 'use client';
 
+/** @module ImpactStats - Component or utility for ImpactStats */
+
+
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Globe, Car, Target as TargetIcon, Sparkles } from 'lucide-react';

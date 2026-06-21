@@ -1,5 +1,8 @@
 'use client';
 
+/** @module CTASection - Component or utility for CTASection */
+
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf, TreePine, Sprout } from 'lucide-react';

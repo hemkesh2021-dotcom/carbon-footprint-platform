@@ -1,3 +1,4 @@
+/** @module index - Component or utility for index */
 export * from './common';
 export * from './assessment';
 export * from './recommendation';

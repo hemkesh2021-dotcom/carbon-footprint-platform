@@ -1,5 +1,8 @@
 'use client';
 
+/** @module TestimonialsSection - Component or utility for TestimonialsSection */
+
+
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';

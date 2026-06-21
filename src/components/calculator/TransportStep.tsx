@@ -1,5 +1,8 @@
 'use client';
 
+/** @module TransportStep - Component or utility for TransportStep */
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Fuel, Leaf, Ban, Plus, Minus } from 'lucide-react';
@@ -63,9 +66,9 @@ export default function TransportStep({ data, onChange }: TransportStepProps) {
 
       {/* Vehicle Type Selector */}
       <div>
-        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
+        <p className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
           What type of vehicle do you use?
-        </label>
+        </p>
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
           {vehicleTypes.map((vehicle) => (
             <button
@@ -165,9 +168,9 @@ export default function TransportStep({ data, onChange }: TransportStepProps) {
 
       {/* Flights Per Year */}
       <div>
-        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+        <p className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
           Flights per year
-        </label>
+        </p>
         <div className="flex items-center gap-3">
           <button
             type="button"

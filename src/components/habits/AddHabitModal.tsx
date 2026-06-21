@@ -1,5 +1,8 @@
 'use client';
 
+/** @module AddHabitModal - Component or utility for AddHabitModal */
+
+
 import { useState, useCallback, useId } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Sparkles } from 'lucide-react';

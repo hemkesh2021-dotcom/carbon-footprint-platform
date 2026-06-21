@@ -1,5 +1,8 @@
 'use client';
 
+/** @module WasteStep - Component or utility for WasteStep */
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Recycle, Leaf, Package, ShoppingBag } from 'lucide-react';
@@ -49,9 +52,9 @@ export default function WasteStep({ data, onChange }: WasteStepProps) {
       <div>
         <div className="flex items-center gap-2 mb-3">
           <Recycle className="w-4 h-4 text-green-500" />
-          <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
             How often do you recycle?
-          </label>
+          </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {recyclingOptions.map((option) => (
@@ -115,9 +118,9 @@ export default function WasteStep({ data, onChange }: WasteStepProps) {
       <div>
         <div className="flex items-center gap-2 mb-3">
           <Package className="w-4 h-4 text-red-500" />
-          <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
             How often do you use single-use plastics?
-          </label>
+          </p>
         </div>
         <div className="grid grid-cols-3 gap-3">
           {plasticOptions.map((option) => (

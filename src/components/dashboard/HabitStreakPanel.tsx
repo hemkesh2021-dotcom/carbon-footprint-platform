@@ -1,5 +1,8 @@
 'use client';
 
+/** @module HabitStreakPanel - Component or utility for HabitStreakPanel */
+
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';

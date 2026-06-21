@@ -1,5 +1,8 @@
 'use client';
 
+/** @module ShoppingStep - Component or utility for ShoppingStep */
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShoppingBag, Smartphone, Recycle, Plus, Minus } from 'lucide-react';
@@ -71,9 +74,9 @@ export default function ShoppingStep({ data, onChange }: ShoppingStepProps) {
       <div>
         <div className="flex items-center gap-2 mb-2">
           <Smartphone className="w-4 h-4 text-blue-500" />
-          <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
             Electronics purchased per year
-          </label>
+          </p>
         </div>
         <div className="flex items-center gap-3">
           <button

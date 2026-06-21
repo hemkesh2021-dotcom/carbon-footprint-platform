@@ -1,5 +1,8 @@
 'use client';
 
+/** @module FootprintScoreCard - Component or utility for FootprintScoreCard */
+
+
 import { useState } from 'react';
 import { Card } from '@/components/ui/Card';
 import { ProgressRing } from '@/components/ui/ProgressRing';

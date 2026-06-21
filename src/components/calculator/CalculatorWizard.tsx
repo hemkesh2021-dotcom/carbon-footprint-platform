@@ -1,5 +1,8 @@
 'use client';
 
+/** @module CalculatorWizard - Component or utility for CalculatorWizard */
+
+
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Clock, CheckCircle2 } from 'lucide-react';

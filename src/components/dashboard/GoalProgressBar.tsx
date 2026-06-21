@@ -1,5 +1,8 @@
 'use client';
 
+/** @module GoalProgressBar - Component or utility for GoalProgressBar */
+
+
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/Card';
 import { ProgressBar } from '@/components/ui/ProgressBar';

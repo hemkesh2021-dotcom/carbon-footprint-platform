@@ -1,5 +1,8 @@
 'use client';
 
+/** @module ResultsView - Component or utility for ResultsView */
+
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {

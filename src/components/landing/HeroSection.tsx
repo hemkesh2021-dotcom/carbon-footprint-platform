@@ -1,5 +1,8 @@
 'use client';
 
+/** @module HeroSection - Component or utility for HeroSection */
+
+
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';

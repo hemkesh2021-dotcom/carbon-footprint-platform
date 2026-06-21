@@ -1,5 +1,8 @@
 'use client';
 
+/** @module EnergyStep - Component or utility for EnergyStep */
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Flame, Snowflake, Sun } from 'lucide-react';

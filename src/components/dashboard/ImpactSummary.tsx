@@ -1,5 +1,8 @@
 'use client';
 
+/** @module ImpactSummary - Component or utility for ImpactSummary */
+
+
 import { Card } from '@/components/ui/Card';
 import { generateMonthlySummary } from '@/lib/insights/generator';
 import type { FootprintResult } from '@/types';

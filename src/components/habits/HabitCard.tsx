@@ -1,5 +1,8 @@
 'use client';
 
+/** @module HabitCard - Component or utility for HabitCard */
+
+
 import { useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trash2, Check } from 'lucide-react';

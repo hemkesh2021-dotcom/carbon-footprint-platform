@@ -1,5 +1,8 @@
 'use client';
 
+/** @module ComparisonCard - Component or utility for ComparisonCard */
+
+
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingDown, TrendingUp, ArrowRight } from 'lucide-react';

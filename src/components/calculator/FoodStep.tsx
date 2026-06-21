@@ -1,5 +1,8 @@
 'use client';
 
+/** @module FoodStep - Component or utility for FoodStep */
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { FoodData } from '@/types';
@@ -53,9 +56,9 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
 
       {/* Diet Type Selector */}
       <div>
-        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
+        <p className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
           How would you describe your diet?
-        </label>
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
           {dietOptions.map((diet) => (
             <button
@@ -130,7 +133,7 @@ export default function FoodStep({ data, onChange }: FoodStepProps) {
         >
           How often do you waste food?
         </label>
-        <div className="flex gap-3">
+        <div className="flex gap-3" role="group" aria-labelledby="food-waste-label">
           {wasteOptions.map((option) => (
             <button
               key={option.value}

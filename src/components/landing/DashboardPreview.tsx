@@ -1,5 +1,8 @@
 'use client';
 
+/** @module DashboardPreview - Component or utility for DashboardPreview */
+
+
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { motion, useInView, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import {

@@ -1,5 +1,8 @@
 'use client';
 
+/** @module TrendLineChart - Component or utility for TrendLineChart */
+
+
 import {
   AreaChart,
   Area,

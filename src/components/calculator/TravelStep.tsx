@@ -1,5 +1,8 @@
 'use client';
 
+/** @module TravelStep - Component or utility for TravelStep */
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Plane, Plus, Minus, Info } from 'lucide-react';
@@ -55,9 +58,9 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
       <div>
         <div className="flex items-center gap-2 mb-2">
           <Plane className="w-4 h-4 text-sky-500" />
-          <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
             Holiday/leisure flights per year
-          </label>
+          </p>
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -92,9 +95,9 @@ export default function TravelStep({ data, onChange }: TravelStepProps) {
 
       {/* Average Flight Distance */}
       <div>
-        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
+        <p className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
           Average flight distance
-        </label>
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {distanceOptions.map((option) => (
             <button

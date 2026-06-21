@@ -1,5 +1,8 @@
 'use client';
 
+/** @module MonthlyTrendChart - Component or utility for MonthlyTrendChart */
+
+
 import { useMemo } from 'react';
 import {
   ResponsiveContainer,

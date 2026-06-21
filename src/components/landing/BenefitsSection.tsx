@@ -1,5 +1,8 @@
 'use client';
 
+/** @module BenefitsSection - Component or utility for BenefitsSection */
+
+
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Target, BarChart3, Lightbulb, TrendingDown } from 'lucide-react';

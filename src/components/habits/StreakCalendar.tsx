@@ -1,5 +1,8 @@
 'use client';
 
+/** @module StreakCalendar - Component or utility for StreakCalendar */
+
+
 import { useMemo, useState } from 'react';
 import type { Habit } from '@/types/habit';
 

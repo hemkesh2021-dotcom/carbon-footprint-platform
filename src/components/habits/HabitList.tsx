@@ -1,5 +1,8 @@
 'use client';
 
+/** @module HabitList - Component or utility for HabitList */
+
+
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { Plus } from 'lucide-react';

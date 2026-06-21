@@ -1,5 +1,8 @@
 'use client';
 
+/** @module CategoryTrendChart - Component or utility for CategoryTrendChart */
+
+
 import { useMemo } from 'react';
 import {
   ResponsiveContainer,
