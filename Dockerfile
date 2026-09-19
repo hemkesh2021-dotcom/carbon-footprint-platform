@@ -5,8 +5,8 @@ RUN apk add --no-cache libc6-compat
 
 # Stage 2: Dependency installation
 FROM base AS deps
-COPY package.json ./
-RUN npm install --no-audit --no-fund
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
 
 # Stage 3: Building the application
 FROM base AS builder
