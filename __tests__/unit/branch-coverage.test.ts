@@ -1,7 +1,7 @@
 import { storage } from '@/services/storage';
-import { getLatestAssessment, getAssessmentHistory } from '@/services/assessment.service';
+import { getLatestAssessment } from '@/services/assessment.service';
 import { updateProgress } from '@/services/goal.service';
-import { markComplete, getHabits } from '@/services/habit.service';
+import { markComplete } from '@/services/habit.service';
 
 // Mock localStorage
 const localStorageMock = (function () {
@@ -38,7 +38,7 @@ describe('Branch Coverage Tests', () => {
   });
 
   describe('storage.ts SSR checks', () => {
-    let originalWindow: any;
+    let originalWindow: typeof window;
 
     beforeAll(() => {
       originalWindow = global.window;
@@ -50,7 +50,7 @@ describe('Branch Coverage Tests', () => {
 
     it('handles undefined window safely', () => {
       // Simulate SSR environment
-      delete (global as any).window;
+      Reflect.deleteProperty(global, 'window');
 
       expect(storage.get('test')).toBeNull();
       expect(() => storage.set('test', 'value')).not.toThrow();

@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Carbon Footprint Platform
 
-## Getting Started
+A Next.js application for estimating a personal carbon footprint, exploring category breakdowns, tracking habits and setting reduction goals. Built with TypeScript, React, Tailwind CSS and Recharts.
 
-First, run the development server:
+## Run locally
+
+Use Node.js 22.12 or newer.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Start with the calculator, then explore the dashboard, habits, insights and education pages. Assessment and habit data are stored in the browser; this is not a multi-device account service. Clearing browser storage can erase local data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verify changes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm test -- --runInBand
+npx tsc --noEmit
+npm run build
+```
 
-## Learn More
+Cloud Build runs lint, tests and type checking before building and deploying the container. Docker installs from the committed lockfile. Cloud deployment requires your own configured Google Cloud project; no hosted demo is claimed here.
 
-To learn more about Next.js, take a look at the following resources:
+## Calculation methodology
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Calculation logic lives in `src/lib/calculator/calculator.ts`; emission factors and their source notes live in `src/lib/calculator/emission-factors.ts`. Comparison benchmarks are in `src/constants/benchmarks.ts`. Review these assumptions before interpreting a result. Estimates depend on self-reported activity, regional factors and category approximations; they are not an independently verified emissions inventory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Layout
 
-## Deploy on Vercel
+- `src/app`: calculator, dashboard, habits, insights and education routes.
+- `src/components`: feature components and shared interface controls.
+- `src/services`: browser storage and assessment, goal and habit operations.
+- `__tests__`: calculator, validation, storage, service and component tests.
+- `Dockerfile`, `cloudbuild.yaml`, `service.yaml`: deployment configuration.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Next improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Publish dated factor sources and uncertainty ranges, add an accessible screenshot and a verified demo URL, and document a browser-data export/restore workflow. Automated checks do not substitute for checking the complete calculator journey in a browser.
